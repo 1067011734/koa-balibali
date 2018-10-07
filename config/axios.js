@@ -1,7 +1,8 @@
 const { router } = require('./setting')
+// console.info(router)
 const createApi = function (url) {
   return function(callBack){
-    router.get(url, callBack)
+    router.post(url, callBack)
   }
 }
 module.exports={

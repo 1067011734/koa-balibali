@@ -1,6 +1,6 @@
 const {app,router} = require('../config/setting')
-router.get('/', (ctx, next) => {
-  ctx.body = 'Hello World!';
-})
-app.use(router.routes());
-app.use(router.allowedMethods())
+app.use(router.routes())
+//post请求响应，杜绝405
+app.use(router.allowedMethods({
+  throw: true,
+}))

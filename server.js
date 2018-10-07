@@ -1,8 +1,9 @@
 const path = require('path')
 const serve = require('koa-static')
 const {app} = require('./config/setting')
-require('./pages')
 require('./apis')
+require('./pages')
+
 
 
 // 1.主页静态网页 把静态页统一放到public中管理
